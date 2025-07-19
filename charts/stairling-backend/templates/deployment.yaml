@@ -18,9 +18,15 @@ spec:
       labels:
         application: stairling
         component: backend
+        {{- with .Values.podLabels }}
+        {{-toYaml . | nindent 8 }}
+        {{- end }}
         {{- include "stairling.selectorLabels" . | nindent 8 }}
       annotations:
         kubectl.kubernetes.io/default-container: api
+        {{- with .Values.podAnnotations }}
+        {{-toYaml . | nindent 8 }}
+        {{- end }}
       {{- if .Values.vault.enabled }}
         vault.security.banzaicloud.io/vault-addr: {{ .Values.vault.url | quote }}
         vault.security.banzaicloud.io/vault-role: "stairling-backend"
@@ -33,6 +39,12 @@ spec:
       {{- if .Values.serviceAccount.create }}
       serviceAccountName: {{ (include "stairling.serviceAccountName" .) | lower }}
       {{- end }}
+      initContainers:
+        - name: migration
+          image: {{ include "stairling.image.migration" . }}
+        {{- with .Values.initContainers }}
+          {{- toYaml . | nindent 8 }}
+        {{- end }}
       containers:
         - name: api
           image: {{ include "stairling.image" . }}
@@ -53,7 +65,7 @@ spec:
             - containerPort: 3000
               name: api
               protocol: TCP
-
+      automountServiceAccountToken: {{ coalesce .Values.vault.enabled .Values.serviceAccount.token }}
       terminationGracePeriodSeconds: 10
       {{- with .Values.nodeSelector }}
       nodeSelector:

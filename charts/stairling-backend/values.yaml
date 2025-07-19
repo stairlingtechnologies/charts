@@ -17,25 +17,16 @@ strategy: {}
 image:
   repository: ghcr.io/stairlingtechnologies/backend
   tag: ''
-  pullSecrets:
-    - name: regcred-read
+  pullSecrets: []
+  #  - name: secret
 serviceAccount:
   create: true
   token: true
   name: *name
   annotations: {}
 
-podSecurityPolicy:
-  enabled: false
-
 podAnnotations: {}
 podLabels: {}
-
-defaultContainer: api
-
-lifecycle:
-  enabled: false
-
 resources: {}
 
 service:
@@ -46,9 +37,9 @@ service:
 
 ingress:
   enabled: true
-  host: api.stairling.bluelabs.fr
+  host: ''
   path: /
-  className: 'nginx'
+  className: ''
   annotations: {}
 
 metrics:
@@ -57,9 +48,6 @@ metrics:
   port: 8080
 
 extraResources: ""
-
-pdb:
-  enabled: false
 
 vault:
   enabled: true

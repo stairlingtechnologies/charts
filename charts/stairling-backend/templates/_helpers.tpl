@@ -62,11 +62,19 @@ Create the name of the service account to use
 {{- end }}
 
 {{/*
-Create the manager image name
+Create the stairling image name
 */}}
 {{- define "stairling.image" -}}
 {{- $tag := .Values.image.tag | default .Chart.AppVersion }}
 {{- printf "%s:%s" .Values.image.repository $tag }}
+{{- end }}
+
+{{/*
+Create the stairling migration image name
+*/}}
+{{- define "stairling.image.migration" -}}
+{{- $tag := .Values.image.tag | default .Chart.AppVersion }}
+{{- printf "%s-migration:%s" .Values.image.repository $tag }}
 {{- end }}
 
 {{/*

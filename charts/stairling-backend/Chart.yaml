@@ -1,0 +1,12 @@
+apiVersion: v2
+appVersion: v1.0.166
+description: Chart Created by David ALEXANDRE <david.alexandre@w6d.io>
+home: https://stairling.com
+keywords:
+- backend
+- stairling
+maintainers:
+- email: david@stairling.com
+  name: david972
+name: stairling-backend
+version: 1.0.1

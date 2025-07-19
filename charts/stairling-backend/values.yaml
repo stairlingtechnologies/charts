@@ -1,0 +1,71 @@
+replicaCount: 1
+
+name: &name stairling-backend
+
+strategy: {}
+#  type: Recreate
+# Rollout sample
+# canary:
+#   maxSurge: 3
+#   maxUnavailable: 0
+#   canaryService: app-canary
+#   stableService: app
+#   steps:
+#     - setWeight: 50
+#     - pause: {}
+
+image:
+  repository: ghcr.io/stairlingtechnologies/backend
+  tag: ''
+  pullSecrets:
+    - name: regcred-read
+serviceAccount:
+  create: true
+  token: true
+  name: *name
+  annotations: {}
+
+podSecurityPolicy:
+  enabled: false
+
+podAnnotations: {}
+podLabels: {}
+
+defaultContainer: api
+
+lifecycle:
+  enabled: false
+
+resources: {}
+
+service:
+  name: *name
+  internalPort: 3000
+  externalPort: 3000
+  type: ClusterIP
+
+ingress:
+  enabled: true
+  host: api.stairling.bluelabs.fr
+  path: /
+  className: 'nginx'
+  annotations: {}
+
+metrics:
+  enabled: false
+  path: '/metrics'
+  port: 8080
+
+extraResources: ""
+
+pdb:
+  enabled: false
+
+vault:
+  enabled: true
+  url: http://vault.vault:8200
+  envFrom:
+    enabled: true
+
+initContainers: []
+

@@ -51,9 +51,12 @@ extraResources: ""
 
 vault:
   enabled: true
-  url: http://vault.vault:8200
+  role: ''
+  skipVerify: "true"
+  url: ''
   envFrom:
     enabled: true
+    path: ''
 
 initContainers: []
 

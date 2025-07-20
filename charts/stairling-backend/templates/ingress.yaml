@@ -19,6 +19,9 @@ spec:
         paths:
           - path: /
             backend:
-              serviceName: {{ .Values.service.name  | default "stairling" }}
-              servicePort: {{ .Values.service.internalPort | default "3000" }}
+              service:
+                name: {{ .Values.service.name  | default "stairling" }}
+                port:
+                  number: {{ .Values.service.internalPort | default "3000" }}
+            pathType: Prefix
   {{- end }}

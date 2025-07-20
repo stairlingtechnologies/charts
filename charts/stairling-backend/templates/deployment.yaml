@@ -19,13 +19,13 @@ spec:
         application: stairling
         component: backend
         {{- with .Values.podLabels }}
-        {{-toYaml . | nindent 8 }}
+        {{- toYaml . | nindent 8 }}
         {{- end }}
         {{- include "stairling.selectorLabels" . | nindent 8 }}
       annotations:
         kubectl.kubernetes.io/default-container: api
         {{- with .Values.podAnnotations }}
-        {{-toYaml . | nindent 8 }}
+        {{- toYaml . | nindent 8 }}
         {{- end }}
       {{- if .Values.vault.enabled }}
         vault.security.banzaicloud.io/vault-addr: {{ .Values.vault.url | quote }}

@@ -3,7 +3,7 @@ appVersion: v1.0.166
 description: Chart Created by David ALEXANDRE <david.alexandre@w6d.io>
 home: https://stairling.com
 sources:
-  - charts.stairling.bluelabs.fr
+  - https://charts.stairling.bluelabs.fr
 keywords:
 - backend
 - stairling
@@ -11,4 +11,4 @@ maintainers:
 - email: david@stairling.com
   name: david972
 name: stairling-backend
-version: 1.0.5
+version: 1.0.6

@@ -60,3 +60,5 @@ vault:
 
 initContainers: []
 
+extraVolumes: []
+extraVolumeMounts: []

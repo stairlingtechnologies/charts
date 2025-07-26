@@ -22,6 +22,6 @@ spec:
               service:
                 name: {{ .Values.service.name  | default "stairling" }}
                 port:
-                  number: {{ .Values.service.internalPort | default "4000" }}
+                  number: {{ .Values.service.externalPort | default "443" }}
             pathType: Prefix
   {{- end }}

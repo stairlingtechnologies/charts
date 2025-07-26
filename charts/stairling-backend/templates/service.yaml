@@ -13,6 +13,6 @@ spec:
     {{- include "stairling.selectorLabels" . | nindent 4 }}
   ports:
     - name: api
-      port:  80
+      port:  443
       protocol: TCP
       targetPort: api

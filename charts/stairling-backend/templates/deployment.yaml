@@ -62,7 +62,7 @@ spec:
           resources:
           {{- toYaml .Values.resources | nindent 12 }}
           ports:
-            - containerPort: 3000
+            - containerPort: 4000
               name: api
               protocol: TCP
           {{- with .Values.extraVolumeMounts }}

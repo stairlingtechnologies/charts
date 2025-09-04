@@ -69,6 +69,9 @@ spec:
           volumeMounts:
             {{ toYaml . | nindent 12 }}
           {{- end }}
+        {{- with .Values.extraContainers }}
+        {{- toYaml . | nindent 8 }}
+        {{- end }}
       automountServiceAccountToken: {{ coalesce .Values.vault.enabled .Values.serviceAccount.token }}
       {{- with .Values.extraVolumes }}
       volumes:

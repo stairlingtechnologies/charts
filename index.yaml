@@ -2,6 +2,24 @@ apiVersion: v1
 entries:
   stairling-backend:
   - apiVersion: v2
+    appVersion: 1.0.171
+    created: "2025-09-09T12:25:52.979533522Z"
+    description: Chart Created by David ALEXANDRE <david.alexandre@w6d.io>
+    digest: 5b76431cbeeabe4286eb0a5d671c2a855e31f4cc16887ebe5951c1ecd1f0febf
+    home: https://stairling.com
+    keywords:
+    - backend
+    - stairling
+    maintainers:
+    - email: david@stairling.com
+      name: david972
+    name: stairling-backend
+    sources:
+    - https://charts.stairling.bluelabs.fr
+    urls:
+    - https://github.com/stairlingtechnologies/charts/releases/download/stairling-backend-1.0.13/stairling-backend-1.0.13.tgz
+    version: 1.0.13
+  - apiVersion: v2
     appVersion: v1.0.166
     created: "2025-09-04T22:15:08.713829298Z"
     description: Chart Created by David ALEXANDRE <david.alexandre@w6d.io>
@@ -179,4 +197,4 @@ entries:
     urls:
     - https://github.com/stairlingtechnologies/charts/releases/download/stairling-backend-1.0.3/stairling-backend-1.0.3.tgz
     version: 1.0.3
-generated: "2025-09-04T22:15:08.713880086Z"
+generated: "2025-09-09T12:25:52.97963407Z"

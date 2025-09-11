@@ -42,6 +42,10 @@ spec:
       initContainers:
         - name: migration
           image: {{ include "stairling.image.migration" . }}
+          {{- with .Values.env }}
+          env:
+            {{ toYaml . | nindent 12 }}
+          {{- end }}
         {{- with .Values.initContainers }}
           {{- toYaml . | nindent 8 }}
         {{- end }}

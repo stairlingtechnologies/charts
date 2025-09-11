@@ -51,6 +51,10 @@ spec:
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           securityContext:
           {{- toYaml .Values.securityContext | nindent 12 }}
+          {{- with .Values.env }}
+          env:
+            {{ . | nindent 12 }}
+          {{- end }}
         {{- if .Values.livenessProbe }}
           livenessProbe:
           {{- toYaml .Values.livenessProbe | nindent 12 }}

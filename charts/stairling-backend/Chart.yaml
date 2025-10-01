@@ -1,6 +1,6 @@
 # charts/stairling-backend/Chart.yaml
 apiVersion: v2
-appVersion: 1.0.177
+appVersion: 1.0.178
 description: Chart Created by David ALEXANDRE <david.alexandre@w6d.io>
 home: https://stairling.com
 sources:
@@ -12,4 +12,4 @@ maintainers:
 - email: david@stairling.com
   name: david972
 name: stairling-backend
-version: 1.0.22
+version: 1.0.23

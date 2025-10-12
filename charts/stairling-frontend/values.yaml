@@ -1,0 +1,64 @@
+replicaCount: 1
+
+name: &name stairling-frontend
+
+strategy: {}
+#  type: Recreate
+# Rollout sample
+# canary:
+#   maxSurge: 3
+#   maxUnavailable: 0
+#   canaryService: app-canary
+#   stableService: app
+#   steps:
+#     - setWeight: 50
+#     - pause: {}
+
+image:
+  repository: ghcr.io/stairlingtechnologies/frontend
+  tag: ''
+  pullSecrets: []
+  #  - name: secret
+serviceAccount:
+  create: true
+  token: true
+  name: *name
+  annotations: {}
+
+podAnnotations: {}
+podLabels: {}
+resources: {}
+
+service:
+  name: *name
+  internalPort: 4000
+  externalPort: 443
+  type: ClusterIP
+
+ingress:
+  enabled: true
+  host: ''
+  path: /
+  className: ''
+  annotations: {}
+
+metrics:
+  enabled: false
+  path: '/metrics'
+  port: 8080
+
+extraResources: ""
+
+vault:
+  enabled: true
+  role: ''
+  skipVerify: "true"
+  url: ''
+  envFrom:
+    enabled: true
+    path: ''
+
+initContainers: []
+
+extraVolumes: []
+extraVolumeMounts: []

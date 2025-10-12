@@ -1,0 +1,15 @@
+# charts/stairling-frontend/Chart.yaml
+apiVersion: v2
+description: Chart Created by David ALEXANDRE <david.alexandre@w6d.io>
+home: https://stairling.com
+sources:
+  - https://stairlingtechnologies.github.io/charts
+keywords:
+- frontend
+- stairling
+maintainers:
+- email: david@stairling.com
+  name: david972
+name: stairling-frontend
+appVersion: 1.2.0
+version: 1.0.1

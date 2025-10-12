@@ -34,7 +34,7 @@ stairling-charts/
 ├── ct.yaml                  # Chart testing configuration
 ├── kind.yaml                # Kubernetes cluster configuration for development
 ├── charts/                  # Directory for Helm charts
-│   ├── stairling-backend/    # Helm chart for the 'backend' service
+│   ├── stairling-frontend/    # Helm chart for the 'frontend' service
 │   │   ├── Chart.yaml       # Chart metadata
 │   │   ├── values.yaml      # Default values for the chart
 │   │   └── templates/       # Kubernetes resource templates
@@ -59,10 +59,10 @@ helm repo add stairling https://stairlingtechnologies.github.io/charts
 
 ## Installing the Chart
 
-For example, to install the `backend` chart:
+For example, to install the `frontend` chart:
 
 ```bash
-helm install my-release stairling/stairling-backend
+helm install my-release stairling/stairling-frontend
 ```
 
 ## Uninstalling the Chart
@@ -291,7 +291,7 @@ resources:
 Once your `values.yaml` file is ready, you can apply the changes using the Helm command:
 
 ```bash
-helm install my-release stairling/stairling-backend -f values.yaml
+helm install my-release stairling/stairling-frontend -f values.yaml
 ```
 
 ---

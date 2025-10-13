@@ -3,6 +3,24 @@ entries:
   stairling-backend:
   - apiVersion: v2
     appVersion: 1.0.178
+    created: "2025-10-13T12:16:55.415593701Z"
+    description: Chart Created by David ALEXANDRE <david.alexandre@w6d.io>
+    digest: a6b727bb410fe7fe27866f57ac62025b319e7b488779d235e37249db4b5c55d3
+    home: https://stairling.com
+    keywords:
+    - backend
+    - stairling
+    maintainers:
+    - email: david@stairling.com
+      name: david972
+    name: stairling-backend
+    sources:
+    - https://charts.stairling.bluelabs.fr
+    urls:
+    - https://github.com/stairlingtechnologies/charts/releases/download/stairling-backend-1.0.24/stairling-backend-1.0.24.tgz
+    version: 1.0.24
+  - apiVersion: v2
+    appVersion: 1.0.178
     created: "2025-10-01T08:04:01.545902241Z"
     description: Chart Created by David ALEXANDRE <david.alexandre@w6d.io>
     digest: 503850b5eea9a369486fce27433158331f320c42bfcd46593bcb7c44fe5fa0a8
@@ -380,6 +398,24 @@ entries:
   stairling-frontend:
   - apiVersion: v2
     appVersion: 1.2.0
+    created: "2025-10-13T12:16:55.622206215Z"
+    description: Chart Created by David ALEXANDRE <david.alexandre@w6d.io>
+    digest: 58c5c9c2fe21ce6f9158cb5aea503b3831b5499a7795dcb567b94d4eb8e5a5c0
+    home: https://stairling.com
+    keywords:
+    - frontend
+    - stairling
+    maintainers:
+    - email: david@stairling.com
+      name: david972
+    name: stairling-frontend
+    sources:
+    - https://stairlingtechnologies.github.io/charts
+    urls:
+    - https://github.com/stairlingtechnologies/charts/releases/download/stairling-frontend-1.0.2/stairling-frontend-1.0.2.tgz
+    version: 1.0.2
+  - apiVersion: v2
+    appVersion: 1.2.0
     created: "2025-10-12T14:02:17.761519036Z"
     description: Chart Created by David ALEXANDRE <david.alexandre@w6d.io>
     digest: 243eae123a9f1447a836d5319bbefb0bcb4e215f967efcd8693fda09b543e321
@@ -396,4 +432,4 @@ entries:
     urls:
     - https://github.com/stairlingtechnologies/charts/releases/download/stairling-frontend-1.0.1/stairling-frontend-1.0.1.tgz
     version: 1.0.1
-generated: "2025-10-12T14:02:17.761592574Z"
+generated: "2025-10-13T12:16:55.622388476Z"

@@ -40,6 +40,9 @@ spec:
       serviceAccountName: {{ (include "stairling.serviceAccountName" .) | lower }}
       {{- end }}
       initContainers:
+        {{- with .Values.preInitContainers }}
+          {{- toYaml . | nindent 8 }}
+        {{- end }}
         - name: migration
           image: {{ include "stairling.image.migration" . }}
           {{- with .Values.env }}

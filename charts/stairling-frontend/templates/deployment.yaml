@@ -39,16 +39,10 @@ spec:
       {{- if .Values.serviceAccount.create }}
       serviceAccountName: {{ (include "stairling.serviceAccountName" .) | lower }}
       {{- end }}
+      {{- with .Values.initContainers }}
       initContainers:
-        - name: migration
-          image: {{ include "stairling.image.migration" . }}
-          {{- with .Values.env }}
-          env:
-            {{ toYaml . | nindent 12 }}
-          {{- end }}
-        {{- with .Values.initContainers }}
-          {{- toYaml . | nindent 8 }}
-        {{- end }}
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
       containers:
         - name: api
           image: {{ include "stairling.image" . }}

@@ -11,5 +11,5 @@ maintainers:
 - email: david@stairling.com
   name: david972
 name: stairling-frontend
-appVersion: 
-version: 1.0.4
+appVersion: 1.3.0
+version: 1.0.5

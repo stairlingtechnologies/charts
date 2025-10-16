@@ -31,8 +31,8 @@ resources: {}
 
 service:
   name: *name
-  internalPort: 4000
-  externalPort: 443
+  internalPort: 80
+  externalPort: 80
   type: ClusterIP
 
 ingress:

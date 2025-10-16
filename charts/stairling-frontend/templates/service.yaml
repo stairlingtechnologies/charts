@@ -12,7 +12,7 @@ spec:
     component: frontend
     {{- include "stairling.selectorLabels" . | nindent 4 }}
   ports:
-    - name: api
-      port:  443
+    - name: web
+      port:  {{ .Values.service.externalPort | default 80 }}
       protocol: TCP
-      targetPort: api
+      targetPort: web

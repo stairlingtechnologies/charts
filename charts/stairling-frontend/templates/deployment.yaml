@@ -64,8 +64,8 @@ spec:
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
           ports:
-            - containerPort: 4000
-              name: api
+            - containerPort: 80
+              name: web
               protocol: TCP
           {{- with .Values.extraVolumeMounts }}
           volumeMounts:

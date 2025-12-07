@@ -10,7 +10,7 @@ spec:
     application: postgresql
     {{ include "postgresql.selectorLabels" . | nindent 4 }}
   ports:
-    - name: data
+    - name: postgres
       port:  5432
       protocol: TCP
-      targetPort: data
+      targetPort: postgres

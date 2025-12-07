@@ -1,0 +1,131 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ include "backend.name" .  | default "stairling" }}
+  labels:
+    application: stairling
+    component: backend
+    {{ include "backend.labels" . | nindent 4 }}
+spec:
+  replicas: {{ .Values.replicaCount }}
+  selector:
+    matchLabels:
+      application: stairling
+      component: backend
+      {{ include "backend.selectorLabels" . | nindent 6 }}
+  template:
+    metadata:
+      labels:
+        application: stairling
+        component: backend
+        {{- with .Values.podLabels }}
+        {{ toYaml . | nindent 8 }}
+        {{- end }}
+        {{ include "backend.selectorLabels" . | nindent 8 }}
+      annotations:
+        kubectl.kubernetes.io/default-container: api
+        {{- with .Values.podAnnotations }}
+        {{ toYaml . | nindent 8 }}
+        {{- end }}
+      {{- if .Values.vault.enabled }}
+        vault.security.banzaicloud.io/vault-addr: {{ .Values.vault.url | quote }}
+        vault.security.banzaicloud.io/vault-role: {{ .Values.vault.role | quote }}
+        vault.security.banzaicloud.io/vault-skip-verify: {{ .Values.vault.skipVerify | quote }}
+      {{- if and .Values.vault.envFrom.enabled .Values.vault.envFrom.path }}
+        vault.security.banzaicloud.io/vault-env-from-path: {{ .Values.vault.envFrom.path }}
+      {{- end }}
+      {{- end }}
+    spec:
+      volumes:
+      {{ if .Values.persistence.sharedData.enabled }}
+        - name: shared-data
+          {{ if eq .Values.persistence.sharedData.type "persistentVolumeClaim" }}
+          persistentVolumeClaim:
+            claimName: {{ .Values.persistence.sharedData.existingClaim | default (include "backend.fullname" .) }}
+          {{ else }}
+          emptyDir: {}
+          {{ end}}
+      {{ end }}
+        - name: tmp
+          emptyDir: {}
+      {{- with .Values.extraVolumes }}
+        {{ toYaml . | nindent 8 }}
+      {{- end }}
+      {{- if .Values.serviceAccount.create }}
+      serviceAccountName: {{ (include "backend.serviceAccountName" .) | lower }}
+      {{- end }}
+      initContainers:
+        {{- with .Values.preInitContainers }}
+          {{ toYaml . | nindent 8 }}
+        {{- end }}
+        - name: migration
+          image: {{ include "backend.image.migration" . }}
+          {{- with .Values.env }}
+          env:
+            {{ toYaml . | nindent 12 }}
+          {{- end }}
+        {{- with .Values.initContainers }}
+          {{ toYaml . | nindent 8 }}
+        {{- end }}
+      containers:
+        - name: api
+          image: {{ include "backend.image" . }}
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          securityContext:
+          {{ toYaml .Values.securityContext | nindent 12 }}
+          {{- with .Values.env }}
+          env:
+            {{ toYaml . | nindent 12 }}
+          {{- end }}
+        {{- if .Values.livenessProbe }}
+          livenessProbe:
+          {{ toYaml .Values.livenessProbe | nindent 12 }}
+        {{- end }}
+        {{- if .Values.readinessProbe }}
+          readinessProbe:
+          {{ toYaml .Values.readinessProbe | nindent 12 }}
+        {{- end }}
+          {{ with .Values.resources }}
+          resources:
+            {{ toYaml . | nindent 12 }}
+          {{ end }}
+          ports:
+            - containerPort: 4000
+              name: api
+              protocol: TCP
+          {{ if or .Values.extraVolumeMounts .Values.persistence.sharedData.enabled }}
+          volumeMounts:
+          {{ if .Values.persistence.sharedData.enabled }}
+            - name: shared-data
+              mountPath: /app/.performance_logs
+            - name: shared-data
+              mountPath: /app/dpae/errors
+          {{ end }}
+          {{- with .Values.extraVolumeMounts }}
+            {{ toYaml . | nindent 12 }}
+          {{- end }}
+          {{- end }}
+        - name: chromedriver
+          image: {{ include "backend.image.chromedriver" . }}
+          ports:
+            - containerPort: 9515
+          volumeMounts:
+            - mountPath: /tmp
+              name: tmp
+        {{- with .Values.extraContainers }}
+        {{ toYaml . | nindent 8 }}
+        {{- end }}
+      automountServiceAccountToken: {{ coalesce .Values.vault.enabled .Values.serviceAccount.token }}
+      terminationGracePeriodSeconds: 10
+      {{- with .Values.nodeSelector }}
+      nodeSelector:
+        {{ toYaml . | nindent 8 }}
+      {{- end }}
+      {{- with .Values.affinity }}
+      affinity:
+        {{ toYaml . | nindent 8 }}
+      {{- end }}
+      {{- with .Values.tolerations }}
+      tolerations:
+        {{ toYaml . | nindent 8 }}
+      {{- end }}

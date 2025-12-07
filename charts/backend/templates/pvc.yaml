@@ -1,0 +1,15 @@
+{{ if and .Values.persistence.sharedData.enabled (eq .Values.persistence.sharedData.type "persistentVolumeClaim") ( not .Values.persistence.sharedData.existingClaim ) }}
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: {{ include "backend.fullname" . }}
+spec:
+  accessModes:
+    - {{ .Values.persistence.sharedData.accessMode | default "ReadWriteOnce" }}
+  {{ if .Values.persistence.sharedData.storageClass }}
+  storageClassName: {{ .Values.persistence.sharedData.storageClass }}
+  {{ end }}
+  resources:
+    requests:
+      storage: {{ .Values.persistence.sharedData.size }}
+{{ end }}

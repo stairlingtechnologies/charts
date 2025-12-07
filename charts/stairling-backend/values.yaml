@@ -19,6 +19,12 @@ image:
   tag: ''
   pullSecrets: []
   #  - name: secret
+  transferCreation:
+    repository: ghcr.io/stairlingtechnologies/transfer-creation-job
+    tag: ''
+  transferStatusUpdate:
+    repository: ghcr.io/stairlingtechnologies/transfer-status-update-job
+    tag: ''
 serviceAccount:
   create: true
   token: true
@@ -28,6 +34,18 @@ serviceAccount:
 podAnnotations: {}
 podLabels: {}
 resources: {}
+
+cronjobs:
+  transferCreation:
+    enabled: false
+    schedules:
+      - "0 6-18/2 * * mon-fri"
+      - "0 6-18/4 * * sat,sun"
+  transferStatusUpdate:
+    enabled: false
+    schedules:
+      - "0 7-19/2 * * mon-fri"
+      - "0 7-19/4 * * sat,sun"
 
 service:
   name: *name

@@ -10,4 +10,4 @@ maintainers:
   - name: david972
     email: david@stairling.com
 name: postgresql
-version: 0.1.0
+version: 0.1.1

@@ -78,6 +78,22 @@ Create the stairling migration image name
 {{- end }}
 
 {{/*
+Create the stairling tranfer creation job image name
+*/}}
+{{- define "stairling.image.transferCreation" -}}
+{{- $tag := .Values.image.transferCreation.tag | default latest }}
+{{- printf "%s:%s" .Values.image.transferCreation.repository $tag }}
+{{- end }}
+
+{{/*
+Create the stairling tranfer status job image name
+*/}}
+{{- define "stairling.image.transferStatusUpdate" -}}
+{{- $tag := .Values.image.transferStatusUpdate.tag | default latest }}
+{{- printf "%s:%s" .Values.image.transferStatusUpdate.repository $tag }}
+{{- end }}
+
+{{/*
 Create metrics bind address
 */}}
 {{- define "stairling.metricsAddress" -}}

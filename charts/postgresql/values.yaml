@@ -1,0 +1,16 @@
+postgres:
+  database: postgres
+  password: postgres
+  username: postgres
+  data: /var/lib/postgresql/data/pgdata
+
+podAnnotations: {}
+
+persistence:
+  enabled: false
+  size: 1Gi
+  storageClass: standard
+  accessModes: ReadWriteOnce
+  annotations: {}
+
+extraEnv: []

@@ -1,0 +1,13 @@
+# charts/postgresql/Chart.yaml
+apiVersion: v2
+appVersion: "17"
+description: A Helm chart for PostgreSQL
+sources:
+  - https://stairlingtechnologies.github.io/charts
+keywords:
+  - postgresql
+maintainers:
+  - name: david972
+    email: david@stairling.com
+name: postgresql
+version: 0.1.0

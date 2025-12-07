@@ -2,7 +2,7 @@ postgres:
   database: postgres
   password: postgres
   username: postgres
-  data: /var/lib/postgresql/data/pgdata
+  data: /var/lib/postgresql/data
 
 podAnnotations: {}
 

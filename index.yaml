@@ -22,6 +22,22 @@ entries:
   postgresql:
   - apiVersion: v2
     appVersion: "17"
+    created: "2025-12-08T12:54:59.993752195Z"
+    description: A Helm chart for PostgreSQL
+    digest: bc3ef6dcd43f80ce9c7f96b5a46bd3e34c0327b3d98250202167bcc127ccb3a0
+    keywords:
+    - postgresql
+    maintainers:
+    - email: david@stairling.com
+      name: david972
+    name: postgresql
+    sources:
+    - https://stairlingtechnologies.github.io/charts
+    urls:
+    - https://github.com/stairlingtechnologies/charts/releases/download/postgresql-0.1.3/postgresql-0.1.3.tgz
+    version: 0.1.3
+  - apiVersion: v2
+    appVersion: "17"
     created: "2025-12-07T22:25:17.32030548Z"
     description: A Helm chart for PostgreSQL
     digest: edaee6c557530149c404d874d20649818cea5dd4cf1c32a3c1bc98fd0f7d142c
@@ -823,4 +839,4 @@ entries:
     urls:
     - https://github.com/stairlingtechnologies/charts/releases/download/stairling-frontend-1.0.1/stairling-frontend-1.0.1.tgz
     version: 1.0.1
-generated: "2025-12-07T22:25:17.320422968Z"
+generated: "2025-12-08T12:54:59.99391042Z"

@@ -95,7 +95,7 @@ persistence:
     accessMode: ReadWriteOnce
 
 vault:
-  enabled: false
+  enabled: true
   role: ''
   skipVerify: "true"
   url: ''

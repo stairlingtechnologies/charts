@@ -93,8 +93,10 @@ spec:
             - containerPort: 4000
               name: api
               protocol: TCP
-          {{ if or .Values.extraVolumeMounts .Values.persistence.sharedData.enabled }}
           volumeMounts:
+            - mountPath: /tmp
+              name: tmp
+          {{ if or .Values.extraVolumeMounts .Values.persistence.sharedData.enabled }}
           {{ if .Values.persistence.sharedData.enabled }}
             - name: shared-data
               mountPath: /app/.performance_logs

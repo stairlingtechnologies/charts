@@ -20,6 +20,8 @@ image:
   pullSecrets: []
   pullPolicy: Always
   #  - name: secret
+  migration:
+    repository: ghcr.io/stairlingtechnologies/backend-migration
   chromedriver:
     repository: ghcr.io/stairlingtechnologies/chromedriver
     tag: 0.1.0

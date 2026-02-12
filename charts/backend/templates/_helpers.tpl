@@ -74,7 +74,7 @@ Create the stairling migration image name
 */}}
 {{- define "backend.image.migration" -}}
 {{- $tag := .Values.image.tag | default .Chart.AppVersion }}
-{{- printf "%s-migration:%s" .Values.image.repository $tag }}
+{{- printf "%s:%s" .Values.image.migration.repository $tag }}
 {{- end }}
 
 {{/*

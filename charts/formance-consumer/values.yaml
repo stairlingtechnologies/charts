@@ -1,0 +1,57 @@
+replicaCount: 1
+
+name: &name formance-consumer
+
+strategy: {}
+#  type: Recreate
+# Rollout sample
+# canary:
+#   maxSurge: 3
+#   maxUnavailable: 0
+#   canaryService: app-canary
+#   stableService: app
+#   steps:
+#     - setWeight: 50
+#     - pause: {}
+
+image:
+  repository: ghcr.io/stairlingtechnologies/formance-consumer
+  tag: ''
+  pullSecrets: []
+  pullPolicy: Always
+  #  - name: secret
+serviceAccount:
+  create: true
+  token: true
+  name: *name
+  annotations: {}
+
+env: []
+
+readinessProbe: {}
+livenessProbe: {}
+securityContext: {}
+
+podAnnotations: {}
+podLabels: {}
+resources: {}
+nodeSelector: {}
+affinity: {}
+tolerations: []
+
+vault:
+  enabled: true
+  role: ''
+  skipVerify: "true"
+  url: ''
+  envFrom:
+    enabled: false
+    path: ''
+
+initContainers: []
+
+extraVolumes: []
+extraVolumeMounts: []
+extraContainers: []
+preInitContainers: []
+extraResources: ""

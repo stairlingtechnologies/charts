@@ -598,6 +598,24 @@ entries:
   formance-consumer:
   - apiVersion: v2
     appVersion: 0.1.0
+    created: "2026-02-16T20:43:44.102907867Z"
+    description: Chart Created by David ALEXANDRE <david.alexandre@w6d.io>
+    digest: 4851767c3644e75e5c426801fe7b0e19902d5dd05105716f1dd3309f6b39c84d
+    home: https://stairling.com
+    keywords:
+    - formance-consumer
+    - stairling
+    maintainers:
+    - email: david@stairling.com
+      name: david972
+    name: formance-consumer
+    sources:
+    - https://charts.stairling.com
+    urls:
+    - https://github.com/stairlingtechnologies/charts/releases/download/formance-consumer-0.1.1/formance-consumer-0.1.1.tgz
+    version: 0.1.1
+  - apiVersion: v2
+    appVersion: 0.1.0
     created: "2026-02-16T18:38:21.284799967Z"
     description: Chart Created by David ALEXANDRE <david.alexandre@w6d.io>
     digest: 00f47605cc1c6056162287067faa1b246798d6e0532700c73cba109023de7718
@@ -613,6 +631,25 @@ entries:
     - https://charts.stairling.com
     urls:
     - https://github.com/stairlingtechnologies/charts/releases/download/formance-consumer-0.1.0/formance-consumer-0.1.0.tgz
+    version: 0.1.0
+  outbox-kafka-worker:
+  - apiVersion: v2
+    appVersion: 0.1.0
+    created: "2026-02-16T20:43:44.329219482Z"
+    description: Chart Created by David ALEXANDRE <david.alexandre@w6d.io>
+    digest: 4fa3517530b67ed6215fb94e599425338a1c507396ded9e97596af1d82bfd509
+    home: https://stairling.com
+    keywords:
+    - outbox-kafka-worker
+    - stairling
+    maintainers:
+    - email: david@stairling.com
+      name: david972
+    name: outbox-kafka-worker
+    sources:
+    - https://charts.stairling.com
+    urls:
+    - https://github.com/stairlingtechnologies/charts/releases/download/outbox-kafka-worker-0.1.0/outbox-kafka-worker-0.1.0.tgz
     version: 0.1.0
   postgresql:
   - apiVersion: v2
@@ -2370,4 +2407,4 @@ entries:
     urls:
     - https://github.com/stairlingtechnologies/charts/releases/download/stairling-frontend-1.0.1/stairling-frontend-1.0.1.tgz
     version: 1.0.1
-generated: "2026-02-16T18:38:21.285137332Z"
+generated: "2026-02-16T20:43:44.330128172Z"

@@ -595,6 +595,25 @@ entries:
     urls:
     - https://github.com/stairlingtechnologies/charts/releases/download/backend-0.1.0/backend-0.1.0.tgz
     version: 0.1.0
+  formance-consumer:
+  - apiVersion: v2
+    appVersion: 0.1.0
+    created: "2026-02-16T18:38:21.284799967Z"
+    description: Chart Created by David ALEXANDRE <david.alexandre@w6d.io>
+    digest: 00f47605cc1c6056162287067faa1b246798d6e0532700c73cba109023de7718
+    home: https://stairling.com
+    keywords:
+    - formance-consumer
+    - stairling
+    maintainers:
+    - email: david@stairling.com
+      name: david972
+    name: formance-consumer
+    sources:
+    - https://charts.stairling.com
+    urls:
+    - https://github.com/stairlingtechnologies/charts/releases/download/formance-consumer-0.1.0/formance-consumer-0.1.0.tgz
+    version: 0.1.0
   postgresql:
   - apiVersion: v2
     appVersion: "17"
@@ -2351,4 +2370,4 @@ entries:
     urls:
     - https://github.com/stairlingtechnologies/charts/releases/download/stairling-frontend-1.0.1/stairling-frontend-1.0.1.tgz
     version: 1.0.1
-generated: "2026-02-13T17:47:51.141003547Z"
+generated: "2026-02-16T18:38:21.285137332Z"

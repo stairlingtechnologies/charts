@@ -1,0 +1,15 @@
+# charts/outbox-kafka-worker/Chart.yaml
+apiVersion: v2
+description: Chart Created by David ALEXANDRE <david.alexandre@w6d.io>
+home: https://stairling.com
+sources:
+  - https://charts.stairling.com
+keywords:
+- outbox-kafka-worker
+- stairling
+maintainers:
+- email: david@stairling.com
+  name: david972
+name: outbox-kafka-worker
+appVersion: 0.1.0
+version: 0.1.0

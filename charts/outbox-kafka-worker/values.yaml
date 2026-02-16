@@ -1,0 +1,45 @@
+replicaCount: 1
+
+strategy: {}
+
+image:
+  repository: ghcr.io/stairlingtechnologies/outbox-kafka-worker
+  tag: ''
+  pullSecrets: []
+  pullPolicy: Always
+
+serviceAccount:
+  create: true
+  token: true
+  name: outbox-kafka-worker
+  annotations: {}
+
+env: []
+
+readinessProbe: {}
+livenessProbe: {}
+securityContext: {}
+
+podAnnotations: {}
+podLabels: {}
+resources: {}
+nodeSelector: {}
+affinity: {}
+tolerations: []
+
+vault:
+  enabled: true
+  role: ''
+  skipVerify: "true"
+  url: ''
+  envFrom:
+    enabled: false
+    path: ''
+
+initContainers: []
+
+extraVolumes: []
+extraVolumeMounts: []
+extraContainers: []
+preInitContainers: []
+extraResources: ""

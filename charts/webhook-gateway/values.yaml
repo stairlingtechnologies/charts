@@ -1,0 +1,63 @@
+replicaCount: 1
+
+
+strategy: {}
+#  type: Recreate
+# Rollout sample
+# canary:
+#   maxSurge: 3
+#   maxUnavailable: 0
+#   canaryService: app-canary
+#   stableService: app
+#   steps:
+#     - setWeight: 50
+#     - pause: {}
+
+image:
+  repository: ghcr.io/stairlingtechnologies/webhook-gateway
+  tag: ''
+  pullSecrets: []
+  pullPolicy: Always
+  #  - name: secret
+
+service:
+  name: ""
+
+ingress:
+  enabled: false
+
+serviceAccount:
+  create: true
+  token: true
+  name: webhook-gateway
+  annotations: {}
+
+env: []
+
+readinessProbe: {}
+livenessProbe: {}
+securityContext: {}
+
+podAnnotations: {}
+podLabels: {}
+resources: {}
+nodeSelector: {}
+affinity: {}
+tolerations: []
+
+vault:
+  enabled: true
+  role: ''
+  skipVerify: "true"
+  url: ''
+  envFrom:
+    enabled: false
+    path: ''
+
+initContainers: []
+
+extraVolumes: []
+extraVolumeMounts: []
+extraContainers: []
+preInitContainers: []
+extraResources: ""

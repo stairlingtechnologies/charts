@@ -2443,4 +2443,23 @@ entries:
     urls:
     - https://github.com/stairlingtechnologies/charts/releases/download/stairling-frontend-1.0.1/stairling-frontend-1.0.1.tgz
     version: 1.0.1
-generated: "2026-02-17T10:19:00.874925094Z"
+  webhook-gateway:
+  - apiVersion: v2
+    appVersion: 0.1.0
+    created: "2026-02-17T12:54:01.714615195Z"
+    description: Chart Created by David ALEXANDRE <david.alexandre@w6d.io>
+    digest: 8868df569ae86aabaf84a70cf6f9a392b1cfc1bee72721f08bda7f34c3e144c5
+    home: https://stairling.com
+    keywords:
+    - webhook-gateway
+    - stairling
+    maintainers:
+    - email: david@stairling.com
+      name: david972
+    name: webhook-gateway
+    sources:
+    - https://charts.stairling.com
+    urls:
+    - https://github.com/stairlingtechnologies/charts/releases/download/webhook-gateway-0.1.0/webhook-gateway-0.1.0.tgz
+    version: 0.1.0
+generated: "2026-02-17T12:54:01.714929296Z"

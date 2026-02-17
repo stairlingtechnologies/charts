@@ -1,0 +1,83 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ include "webhook.name" .  | default "webhook-gateway" }}
+  labels:
+    application: stairling
+    component: webhook
+    {{ include "webhook.labels" . | nindent 4 }}
+spec:
+  replicas: {{ .Values.replicaCount }}
+  selector:
+    matchLabels:
+      application: stairling
+      component: webhook
+      {{ include "webhook.selectorLabels" . | nindent 6 }}
+  template:
+    metadata:
+      labels:
+        application: stairling
+        component: webhook
+        {{- with .Values.podLabels }}
+        {{ toYaml . | nindent 8 }}
+        {{- end }}
+        {{ include "webhook.selectorLabels" . | nindent 8 }}
+      annotations:
+        kubectl.kubernetes.io/default-container: consumer
+        {{- with .Values.podAnnotations }}
+        {{ toYaml . | nindent 8 }}
+        {{- end }}
+      {{- if .Values.vault.enabled }}
+        vault.security.banzaicloud.io/vault-addr: {{ .Values.vault.url | quote }}
+        vault.security.banzaicloud.io/vault-role: {{ .Values.vault.role | quote }}
+        vault.security.banzaicloud.io/vault-skip-verify: {{ .Values.vault.skipVerify | quote }}
+      {{- if and .Values.vault.envFrom.enabled .Values.vault.envFrom.path }}
+        vault.security.banzaicloud.io/vault-env-from-path: {{ .Values.vault.envFrom.path }}
+      {{- end }}
+      {{- end }}
+    spec:
+      {{- if .Values.serviceAccount.create }}
+      serviceAccountName: {{ (include "webhook.serviceAccountName" .) | lower }}
+      {{- end }}
+      containers:
+        - name: consumer
+          image: {{ include "webhook.image" . }}
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          {{- with .Values.securityContext}}
+          securityContext:
+            {{ toYaml . | nindent 12 }}
+          {{ end }}
+          {{- with .Values.env }}
+          env:
+            {{ toYaml . | nindent 12 }}
+          {{- end }}
+          {{- if .Values.livenessProbe }}
+          livenessProbe:
+            {{ toYaml .Values.livenessProbe | nindent 12 }}
+          {{- end }}
+          {{- if .Values.readinessProbe }}
+          ports:
+            - containerPort: 8080
+              name: http
+              protocol: TCP
+          readinessProbe:
+            {{ toYaml .Values.readinessProbe | nindent 12 }}
+           {{- end }}
+          {{- with .Values.resources }}
+          resources:
+            {{ toYaml . | nindent 12 }}
+          {{- end }}
+      automountServiceAccountToken: {{ coalesce .Values.vault.enabled .Values.serviceAccount.token }}
+      terminationGracePeriodSeconds: 10
+      {{- with .Values.nodeSelector }}
+      nodeSelector:
+        {{ toYaml . | nindent 8 }}
+      {{- end }}
+      {{- with .Values.affinity }}
+      affinity:
+        {{ toYaml . | nindent 8 }}
+      {{- end }}
+      {{- with .Values.tolerations }}
+      tolerations:
+        {{ toYaml . | nindent 8 }}
+      {{- end }}

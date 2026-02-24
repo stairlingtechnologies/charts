@@ -1,0 +1,274 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ include "assistant.name" .  | default "assistant" }}-rules
+  labels:
+    app: stairling
+    component: assistant
+data:
+  rules.yaml: |
+    # Add your rules here
+    bill_types:
+      A:
+        name: "Lavage"
+        description: "Lavage véhicule"
+        category: "vehicule"
+        vat_rate: 2000
+      B:
+        name: "Carburant"
+        description: "Carburant (essence, diesel, électrique)"
+        category: "vehicule"
+        vat_rate: 2000
+      C:
+        name: "Pneu"
+        description: "Achat/montage pneus"
+        category: "vehicule"
+        vat_rate: 2000
+      D:
+        name: "Mécanique"
+        description: "Réparations et entretien véhicule"
+        category: "vehicule"
+        vat_rate: 2000
+      E:
+        name: "Repas"
+        description: "Restauration professionnelle"
+        category: "frais"
+        vat_rate: 1000
+        amount_limit: 2500
+      F:
+        name: "Location véhicule"
+        description: "Location courte/longue durée"
+        category: "vehicule"
+        vat_rate: 2000
+      G:
+        name: "Autre"
+        description: "Dépense non catégorisée"
+        category: "autre"
+        vat_rate: 2000
+      H:
+        name: "Klavem"
+        description: "Facture Klavem"
+        category: "partenaire"
+        vat_rate: 2000
+      I:
+        name: "UrbanCode"
+        description: "Facture UrbanCode"
+        category: "partenaire"
+        vat_rate: 2000
+      J:
+        name: "Clicar"
+        description: "Facture Clicar"
+        category: "partenaire"
+        vat_rate: 2000
+      K:
+        name: "Achat véhicule"
+        description: "Achat de véhicule"
+        category: "vehicule"
+        vat_rate: 2000
+      L:
+        name: "Téléphonie"
+        description: "Abonnement/achat téléphone"
+        category: "frais"
+        vat_rate: 2000
+      M:
+        name: "Assurance"
+        description: "Assurance véhicule"
+        category: "vehicule"
+        vat_rate: 2000
+      N:
+        name: "Stationnement"
+        description: "Parking"
+        category: "frais"
+        vat_rate: 2000
+      O:
+        name: "Péage"
+        description: "Péage autoroute"
+        category: "frais"
+        vat_rate: 2000
+      P:
+        name: "Formation"
+        description: "Formation professionnelle"
+        category: "frais"
+        vat_rate: 2000
+      Q:
+        name: "Consommables"
+        description: "Consommables véhicule (lave-glace, etc.)"
+        category: "vehicule"
+        vat_rate: 2000
+      X:
+        name: "Dépense personnelle"
+        description: "Dépense non déductible (vêtements, coiffeur, etc.)"
+        category: "personnel"
+        vat_rate: 0
+    # Amount Thresholds (in cents)
+    amount_thresholds:
+      A: 5000     # Lavage: 50€
+      B: 15000    # Carburant: 150€
+      C: 100000   # Pneu: 1000€
+      D: 100000   # Mécanique: 1000€
+      E: 2500     # Repas: 25€
+      F: 200000   # Location: 2000€
+      G: 50000    # Autre: 500€
+      N: 5000     # Stationnement: 50€
+      O: 10000    # Péage: 100€
+      Q: 20000    # Consommables: 200€
+    # Categorization Keywords
+    categorization_keywords:
+      A:
+        - "lavage"
+        - "car wash"
+        - "nettoyage"
+        - "pressing auto"
+      B:
+        - "carburant"
+        - "essence"
+        - "diesel"
+        - "gasoil"
+        - "sp95"
+        - "sp98"
+        - "e10"
+        - "e85"
+        - "total"
+        - "shell"
+        - "bp"
+        - "esso"
+        - "avia"
+        - "intermarché"
+        - "leclerc"
+        - "station"
+        - "recharge électrique"
+        - "ionity"
+        - "tesla supercharger"
+      C:
+        - "pneu"
+        - "michelin"
+        - "bridgestone"
+        - "continental"
+        - "pirelli"
+        - "goodyear"
+        - "dunlop"
+        - "montage pneu"
+      D:
+        - "garage"
+        - "mécanique"
+        - "réparation"
+        - "entretien"
+        - "vidange"
+        - "freins"
+        - "révision"
+        - "contrôle technique"
+        - "norauto"
+        - "feu vert"
+        - "speedy"
+        - "midas"
+      E:
+        - "restaurant"
+        - "repas"
+        - "déjeuner"
+        - "dîner"
+        - "brasserie"
+        - "café"
+        - "mcdo"
+        - "mcdonald"
+        - "burger"
+        - "pizza"
+        - "kebab"
+        - "sushi"
+        - "uber eats"
+        - "deliveroo"
+      F:
+        - "location"
+        - "hertz"
+        - "avis"
+        - "europcar"
+        - "sixt"
+        - "enterprise"
+        - "rent"
+        - "leasing"
+      H:
+        - "klavem"
+      I:
+        - "urbancode"
+      J:
+        - "clicar"
+      K:
+        - "achat véhicule"
+        - "vente véhicule"
+        - "carte grise"
+        - "immatriculation"
+        - "certificat"
+      L:
+        - "téléphone"
+        - "mobile"
+        - "sfr"
+        - "orange"
+        - "bouygues"
+        - "free"
+        - "forfait"
+        - "iphone"
+        - "samsung"
+        - "smartphone"
+      M:
+        - "assurance"
+        - "axa"
+        - "maif"
+        - "macif"
+        - "matmut"
+        - "allianz"
+        - "groupama"
+      N:
+        - "parking"
+        - "stationnement"
+        - "parcmètre"
+        - "indigo"
+        - "effia"
+        - "vinci park"
+        - "qpark"
+      O:
+        - "péage"
+        - "autoroute"
+        - "vinci"
+        - "sanef"
+        - "aprr"
+        - "cofiroute"
+        - "télépéage"
+        - "liber-t"
+      P:
+        - "formation"
+        - "stage"
+        - "cours"
+        - "certificat"
+        - "diplôme"
+        - "permis"
+      Q:
+        - "lave-glace"
+        - "essuie-glace"
+        - "liquide refroidissement"
+        - "huile moteur"
+        - "ampoule"
+        - "fusible"
+        - "désodorisant"
+      X:
+        - "vêtement"
+        - "coiffeur"
+        - "supermarché"
+        - "courses"
+        - "carrefour"
+        - "auchan"
+        - "lidl"
+        - "box internet"
+        - "électroménager"
+        - "meuble"
+        - "bijou"
+    # OCR Confidence Thresholds
+    ocr_thresholds:
+      high: 0.9
+      medium: 0.7
+      low: 0.5
+      reject: 0.3
+    # Business Rules
+    business_rules:
+      max_bill_age_days: 365
+      nominativity_threshold_meal: 2500
+      duplicate_window_days: 30
+      auto_approve_confidence: 0.95

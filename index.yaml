@@ -631,6 +631,25 @@ entries:
     urls:
     - https://github.com/stairlingtechnologies/charts/releases/download/backend-0.1.0/backend-0.1.0.tgz
     version: 0.1.0
+  chatbot-web:
+  - apiVersion: v2
+    appVersion: 0.1.0
+    created: "2026-02-24T22:16:47.657466482Z"
+    description: Chart Created by David ALEXANDRE <david.alexandre@w6d.io>
+    digest: 833dad910c287f49eb348565b77ae5bfcc7788a80578fa62303bbee30b3a5c1d
+    home: https://stairling.com
+    keywords:
+    - chatbot-web
+    - stairling
+    maintainers:
+    - email: david@stairling.com
+      name: david972
+    name: chatbot-web
+    sources:
+    - https://charts.stairling.com
+    urls:
+    - https://github.com/stairlingtechnologies/charts/releases/download/chatbot-web-0.1.0/chatbot-web-0.1.0.tgz
+    version: 0.1.0
   formance-consumer:
   - apiVersion: v2
     appVersion: 0.1.0
@@ -751,6 +770,25 @@ entries:
     - https://stairlingtechnologies.github.io/charts
     urls:
     - https://github.com/stairlingtechnologies/charts/releases/download/postgresql-0.1.0/postgresql-0.1.0.tgz
+    version: 0.1.0
+  stairling-assistant:
+  - apiVersion: v2
+    appVersion: 0.1.0
+    created: "2026-02-24T22:16:47.809108084Z"
+    description: Chart Created by David ALEXANDRE <david.alexandre@w6d.io>
+    digest: e0497ebb4b6a0865b848e7ef38b57fda26d105f0da2d9391882e322452911402
+    home: https://stairling.com
+    keywords:
+    - assistant
+    - stairling
+    maintainers:
+    - email: david@stairling.com
+      name: david972
+    name: stairling-assistant
+    sources:
+    - https://charts.stairling.com
+    urls:
+    - https://github.com/stairlingtechnologies/charts/releases/download/stairling-assistant-0.1.0/stairling-assistant-0.1.0.tgz
     version: 0.1.0
   stairling-backend:
   - apiVersion: v2
@@ -2498,4 +2536,4 @@ entries:
     urls:
     - https://github.com/stairlingtechnologies/charts/releases/download/webhook-gateway-0.1.0/webhook-gateway-0.1.0.tgz
     version: 0.1.0
-generated: "2026-02-24T15:36:48.014654833Z"
+generated: "2026-02-24T22:16:47.809484769Z"

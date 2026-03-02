@@ -2,6 +2,24 @@ apiVersion: v1
 entries:
   backend:
   - apiVersion: v2
+    appVersion: 1.27.0
+    created: "2026-03-02T09:07:48.791254495Z"
+    description: Chart Created by David ALEXANDRE <david.alexandre@w6d.io>
+    digest: 59be98a809c0c063ddfdf39a8961926b64d587b95e3534edca7b18d6ad146f90
+    home: https://stairling.com
+    keywords:
+    - backend
+    - stairling
+    maintainers:
+    - email: david@stairling.com
+      name: david972
+    name: backend
+    sources:
+    - https://charts.stairling.bluelabs.fr
+    urls:
+    - https://github.com/stairlingtechnologies/charts/releases/download/backend-0.1.40/backend-0.1.40.tgz
+    version: 0.1.40
+  - apiVersion: v2
     appVersion: 1.26.8
     created: "2026-02-26T09:11:01.028296165Z"
     description: Chart Created by David ALEXANDRE <david.alexandre@w6d.io>
@@ -881,6 +899,24 @@ entries:
     - https://github.com/stairlingtechnologies/charts/releases/download/stairling-assistant-0.1.0/stairling-assistant-0.1.0.tgz
     version: 0.1.0
   stairling-backend:
+  - apiVersion: v2
+    appVersion: 1.27.0
+    created: "2026-03-02T09:07:48.942821552Z"
+    description: Chart Created by David ALEXANDRE <david.alexandre@w6d.io>
+    digest: e572514423686d2ca4159926078ac55139431679ff6b44ac87bbe1ef5179ee78
+    home: https://stairling.com
+    keywords:
+    - backend
+    - stairling
+    maintainers:
+    - email: david@stairling.com
+      name: david972
+    name: stairling-backend
+    sources:
+    - https://charts.stairling.bluelabs.fr
+    urls:
+    - https://github.com/stairlingtechnologies/charts/releases/download/stairling-backend-1.0.96/stairling-backend-1.0.96.tgz
+    version: 1.0.96
   - apiVersion: v2
     appVersion: 1.26.8
     created: "2026-02-26T09:11:01.185007102Z"
@@ -2698,4 +2734,4 @@ entries:
     urls:
     - https://github.com/stairlingtechnologies/charts/releases/download/webhook-gateway-0.1.0/webhook-gateway-0.1.0.tgz
     version: 0.1.0
-generated: "2026-02-26T09:11:01.18626827Z"
+generated: "2026-03-02T09:07:48.943336915Z"

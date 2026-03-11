@@ -2,6 +2,24 @@ apiVersion: v1
 entries:
   backend:
   - apiVersion: v2
+    appVersion: 1.28.5
+    created: "2026-03-11T14:19:26.219354427Z"
+    description: Chart Created by David ALEXANDRE <david.alexandre@w6d.io>
+    digest: 6c5c4601815586406095d7b9670957bf7e6a9b540e65929f4d5ca5e77fd6921f
+    home: https://stairling.com
+    keywords:
+    - backend
+    - stairling
+    maintainers:
+    - email: david@stairling.com
+      name: david972
+    name: backend
+    sources:
+    - https://charts.stairling.bluelabs.fr
+    urls:
+    - https://github.com/stairlingtechnologies/charts/releases/download/backend-0.1.52/backend-0.1.52.tgz
+    version: 0.1.52
+  - apiVersion: v2
     appVersion: 1.28.4
     created: "2026-03-11T11:55:18.418704219Z"
     description: Chart Created by David ALEXANDRE <david.alexandre@w6d.io>
@@ -1097,6 +1115,24 @@ entries:
     - https://github.com/stairlingtechnologies/charts/releases/download/stairling-assistant-0.1.0/stairling-assistant-0.1.0.tgz
     version: 0.1.0
   stairling-backend:
+  - apiVersion: v2
+    appVersion: 1.28.5
+    created: "2026-03-11T14:19:26.485562359Z"
+    description: Chart Created by David ALEXANDRE <david.alexandre@w6d.io>
+    digest: 74eda286c31313ea677d9e402f62de6d9541c2fa05cd4fb6b166437726be2df1
+    home: https://stairling.com
+    keywords:
+    - backend
+    - stairling
+    maintainers:
+    - email: david@stairling.com
+      name: david972
+    name: stairling-backend
+    sources:
+    - https://charts.stairling.bluelabs.fr
+    urls:
+    - https://github.com/stairlingtechnologies/charts/releases/download/stairling-backend-1.0.108/stairling-backend-1.0.108.tgz
+    version: 1.0.108
   - apiVersion: v2
     appVersion: 1.28.4
     created: "2026-03-11T11:55:18.599669915Z"
@@ -3130,4 +3166,4 @@ entries:
     urls:
     - https://github.com/stairlingtechnologies/charts/releases/download/webhook-gateway-0.1.0/webhook-gateway-0.1.0.tgz
     version: 0.1.0
-generated: "2026-03-11T11:55:18.600650801Z"
+generated: "2026-03-11T14:19:26.486261273Z"

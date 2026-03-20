@@ -2,6 +2,24 @@ apiVersion: v1
 entries:
   backend:
   - apiVersion: v2
+    appVersion: 1.28.10
+    created: "2026-03-20T11:44:23.149427346Z"
+    description: Chart Created by David ALEXANDRE <david.alexandre@w6d.io>
+    digest: 36dc9d897ee21f893d42d1452938f371fb31c258588ce21cd95d75b92b6ceb4d
+    home: https://stairling.com
+    keywords:
+    - backend
+    - stairling
+    maintainers:
+    - email: david@stairling.com
+      name: david972
+    name: backend
+    sources:
+    - https://charts.stairling.bluelabs.fr
+    urls:
+    - https://github.com/stairlingtechnologies/charts/releases/download/backend-0.1.57/backend-0.1.57.tgz
+    version: 0.1.57
+  - apiVersion: v2
     appVersion: 1.28.9
     created: "2026-03-19T09:59:52.944130672Z"
     description: Chart Created by David ALEXANDRE <david.alexandre@w6d.io>
@@ -1187,6 +1205,24 @@ entries:
     - https://github.com/stairlingtechnologies/charts/releases/download/stairling-assistant-0.1.0/stairling-assistant-0.1.0.tgz
     version: 0.1.0
   stairling-backend:
+  - apiVersion: v2
+    appVersion: 1.28.10
+    created: "2026-03-20T11:44:23.309457787Z"
+    description: Chart Created by David ALEXANDRE <david.alexandre@w6d.io>
+    digest: a5b6c8b9b37cb1055f8aadbd5a120e73e120d47f5b76258d85603a67a3b428cc
+    home: https://stairling.com
+    keywords:
+    - backend
+    - stairling
+    maintainers:
+    - email: david@stairling.com
+      name: david972
+    name: stairling-backend
+    sources:
+    - https://charts.stairling.bluelabs.fr
+    urls:
+    - https://github.com/stairlingtechnologies/charts/releases/download/stairling-backend-1.0.113/stairling-backend-1.0.113.tgz
+    version: 1.0.113
   - apiVersion: v2
     appVersion: 1.28.9
     created: "2026-03-19T09:59:53.174031376Z"
@@ -3310,4 +3346,4 @@ entries:
     urls:
     - https://github.com/stairlingtechnologies/charts/releases/download/webhook-gateway-0.1.0/webhook-gateway-0.1.0.tgz
     version: 0.1.0
-generated: "2026-03-19T09:59:53.17457477Z"
+generated: "2026-03-20T11:44:23.310355386Z"

@@ -2,6 +2,24 @@ apiVersion: v1
 entries:
   backend:
   - apiVersion: v2
+    appVersion: 1.28.12
+    created: "2026-03-25T14:03:50.33921307Z"
+    description: Chart Created by David ALEXANDRE <david.alexandre@w6d.io>
+    digest: 966e98b9d8df8a0221dd4b22ba4b7899334708f1def05d011b9c41ffb8aa9b6b
+    home: https://stairling.com
+    keywords:
+    - backend
+    - stairling
+    maintainers:
+    - email: david@stairling.com
+      name: david972
+    name: backend
+    sources:
+    - https://charts.stairling.bluelabs.fr
+    urls:
+    - https://github.com/stairlingtechnologies/charts/releases/download/backend-0.1.58/backend-0.1.58.tgz
+    version: 0.1.58
+  - apiVersion: v2
     appVersion: 1.28.10
     created: "2026-03-20T11:44:23.149427346Z"
     description: Chart Created by David ALEXANDRE <david.alexandre@w6d.io>
@@ -1205,6 +1223,24 @@ entries:
     - https://github.com/stairlingtechnologies/charts/releases/download/stairling-assistant-0.1.0/stairling-assistant-0.1.0.tgz
     version: 0.1.0
   stairling-backend:
+  - apiVersion: v2
+    appVersion: 1.28.12
+    created: "2026-03-25T14:03:50.587220979Z"
+    description: Chart Created by David ALEXANDRE <david.alexandre@w6d.io>
+    digest: 1a1c2fb5deb8880c1f3b54dfdd0852b1e9a687503cfe0775325874594bd630c0
+    home: https://stairling.com
+    keywords:
+    - backend
+    - stairling
+    maintainers:
+    - email: david@stairling.com
+      name: david972
+    name: stairling-backend
+    sources:
+    - https://charts.stairling.bluelabs.fr
+    urls:
+    - https://github.com/stairlingtechnologies/charts/releases/download/stairling-backend-1.0.114/stairling-backend-1.0.114.tgz
+    version: 1.0.114
   - apiVersion: v2
     appVersion: 1.28.10
     created: "2026-03-20T11:44:23.309457787Z"
@@ -3346,4 +3382,4 @@ entries:
     urls:
     - https://github.com/stairlingtechnologies/charts/releases/download/webhook-gateway-0.1.0/webhook-gateway-0.1.0.tgz
     version: 0.1.0
-generated: "2026-03-20T11:44:23.310355386Z"
+generated: "2026-03-25T14:03:50.588133989Z"

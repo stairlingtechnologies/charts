@@ -2,6 +2,24 @@ apiVersion: v1
 entries:
   backend:
   - apiVersion: v2
+    appVersion: 1.28.13
+    created: "2026-03-26T10:11:22.054602543Z"
+    description: Chart Created by David ALEXANDRE <david.alexandre@w6d.io>
+    digest: c1924e1748e9c0c8a9321d70b1f7547f4ec0d83e8455a2cd4d3a94362b12e05f
+    home: https://stairling.com
+    keywords:
+    - backend
+    - stairling
+    maintainers:
+    - email: david@stairling.com
+      name: david972
+    name: backend
+    sources:
+    - https://charts.stairling.bluelabs.fr
+    urls:
+    - https://github.com/stairlingtechnologies/charts/releases/download/backend-0.1.60/backend-0.1.60.tgz
+    version: 0.1.60
+  - apiVersion: v2
     appVersion: 1.28.11
     created: "2026-03-25T14:32:51.259212057Z"
     description: Chart Created by David ALEXANDRE <david.alexandre@w6d.io>
@@ -1241,6 +1259,24 @@ entries:
     - https://github.com/stairlingtechnologies/charts/releases/download/stairling-assistant-0.1.0/stairling-assistant-0.1.0.tgz
     version: 0.1.0
   stairling-backend:
+  - apiVersion: v2
+    appVersion: 1.28.13
+    created: "2026-03-26T10:11:22.178658923Z"
+    description: Chart Created by David ALEXANDRE <david.alexandre@w6d.io>
+    digest: df31a07ea772c0c7e7be831bff01da52a583bd7b47c50d9c6c53bafce5e20bfa
+    home: https://stairling.com
+    keywords:
+    - backend
+    - stairling
+    maintainers:
+    - email: david@stairling.com
+      name: david972
+    name: stairling-backend
+    sources:
+    - https://charts.stairling.bluelabs.fr
+    urls:
+    - https://github.com/stairlingtechnologies/charts/releases/download/stairling-backend-1.0.116/stairling-backend-1.0.116.tgz
+    version: 1.0.116
   - apiVersion: v2
     appVersion: 1.28.11
     created: "2026-03-25T14:32:51.524075302Z"
@@ -3418,4 +3454,4 @@ entries:
     urls:
     - https://github.com/stairlingtechnologies/charts/releases/download/webhook-gateway-0.1.0/webhook-gateway-0.1.0.tgz
     version: 0.1.0
-generated: "2026-03-25T14:32:51.524631292Z"
+generated: "2026-03-26T10:11:22.179490357Z"

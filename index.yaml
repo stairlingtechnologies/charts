@@ -2,6 +2,24 @@ apiVersion: v1
 entries:
   backend:
   - apiVersion: v2
+    appVersion: 1.28.14
+    created: "2026-03-26T14:56:12.281725754Z"
+    description: Chart Created by David ALEXANDRE <david.alexandre@w6d.io>
+    digest: f99db836133ab6829f99363146a5ed6f471a6ba8f4cb89303adead0e4442d333
+    home: https://stairling.com
+    keywords:
+    - backend
+    - stairling
+    maintainers:
+    - email: david@stairling.com
+      name: david972
+    name: backend
+    sources:
+    - https://charts.stairling.bluelabs.fr
+    urls:
+    - https://github.com/stairlingtechnologies/charts/releases/download/backend-0.1.61/backend-0.1.61.tgz
+    version: 0.1.61
+  - apiVersion: v2
     appVersion: 1.28.13
     created: "2026-03-26T10:11:22.054602543Z"
     description: Chart Created by David ALEXANDRE <david.alexandre@w6d.io>
@@ -1259,6 +1277,24 @@ entries:
     - https://github.com/stairlingtechnologies/charts/releases/download/stairling-assistant-0.1.0/stairling-assistant-0.1.0.tgz
     version: 0.1.0
   stairling-backend:
+  - apiVersion: v2
+    appVersion: 1.28.14
+    created: "2026-03-26T14:56:12.479998336Z"
+    description: Chart Created by David ALEXANDRE <david.alexandre@w6d.io>
+    digest: 9681c2c995bd35a2a0309dbdedbf50e2b30b21cc631e4046fd19e2e228250ee8
+    home: https://stairling.com
+    keywords:
+    - backend
+    - stairling
+    maintainers:
+    - email: david@stairling.com
+      name: david972
+    name: stairling-backend
+    sources:
+    - https://charts.stairling.bluelabs.fr
+    urls:
+    - https://github.com/stairlingtechnologies/charts/releases/download/stairling-backend-1.0.117/stairling-backend-1.0.117.tgz
+    version: 1.0.117
   - apiVersion: v2
     appVersion: 1.28.13
     created: "2026-03-26T10:11:22.178658923Z"
@@ -3454,4 +3490,4 @@ entries:
     urls:
     - https://github.com/stairlingtechnologies/charts/releases/download/webhook-gateway-0.1.0/webhook-gateway-0.1.0.tgz
     version: 0.1.0
-generated: "2026-03-26T10:11:22.179490357Z"
+generated: "2026-03-26T14:56:12.480614069Z"

@@ -2,6 +2,24 @@ apiVersion: v1
 entries:
   backend:
   - apiVersion: v2
+    appVersion: 1.28.15
+    created: "2026-03-31T17:19:39.557787434Z"
+    description: Chart Created by David ALEXANDRE <david.alexandre@w6d.io>
+    digest: d458a0a7cc99b0e922aac44b01f4e50b5f1ca79e537461188d47f36121b0a2cd
+    home: https://stairling.com
+    keywords:
+    - backend
+    - stairling
+    maintainers:
+    - email: david@stairling.com
+      name: david972
+    name: backend
+    sources:
+    - https://charts.stairling.bluelabs.fr
+    urls:
+    - https://github.com/stairlingtechnologies/charts/releases/download/backend-0.1.62/backend-0.1.62.tgz
+    version: 0.1.62
+  - apiVersion: v2
     appVersion: 1.28.14
     created: "2026-03-26T14:56:12.281725754Z"
     description: Chart Created by David ALEXANDRE <david.alexandre@w6d.io>
@@ -1277,6 +1295,24 @@ entries:
     - https://github.com/stairlingtechnologies/charts/releases/download/stairling-assistant-0.1.0/stairling-assistant-0.1.0.tgz
     version: 0.1.0
   stairling-backend:
+  - apiVersion: v2
+    appVersion: 1.28.15
+    created: "2026-03-31T17:19:39.705399403Z"
+    description: Chart Created by David ALEXANDRE <david.alexandre@w6d.io>
+    digest: 68bc25569bb85ad92b6320471e9f73b51fc22ae76e080061a9f509ad4992f121
+    home: https://stairling.com
+    keywords:
+    - backend
+    - stairling
+    maintainers:
+    - email: david@stairling.com
+      name: david972
+    name: stairling-backend
+    sources:
+    - https://charts.stairling.bluelabs.fr
+    urls:
+    - https://github.com/stairlingtechnologies/charts/releases/download/stairling-backend-1.0.118/stairling-backend-1.0.118.tgz
+    version: 1.0.118
   - apiVersion: v2
     appVersion: 1.28.14
     created: "2026-03-26T14:56:12.479998336Z"
@@ -3490,4 +3526,4 @@ entries:
     urls:
     - https://github.com/stairlingtechnologies/charts/releases/download/webhook-gateway-0.1.0/webhook-gateway-0.1.0.tgz
     version: 0.1.0
-generated: "2026-03-26T14:56:12.480614069Z"
+generated: "2026-03-31T17:19:39.706109738Z"

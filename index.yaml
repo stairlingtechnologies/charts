@@ -2,6 +2,24 @@ apiVersion: v1
 entries:
   backend:
   - apiVersion: v2
+    appVersion: 1.29.7
+    created: "2026-04-10T08:23:35.344763995Z"
+    description: Chart Created by David ALEXANDRE <david.alexandre@w6d.io>
+    digest: 22e014baa1905685b93c1288a892eb7b924c30ab0753c8efbf824aa35c2893b8
+    home: https://stairling.com
+    keywords:
+    - backend
+    - stairling
+    maintainers:
+    - email: david@stairling.com
+      name: david972
+    name: backend
+    sources:
+    - https://charts.stairling.bluelabs.fr
+    urls:
+    - https://github.com/stairlingtechnologies/charts/releases/download/backend-0.1.69/backend-0.1.69.tgz
+    version: 0.1.69
+  - apiVersion: v2
     appVersion: 1.29.6
     created: "2026-04-09T14:41:21.884557032Z"
     description: Chart Created by David ALEXANDRE <david.alexandre@w6d.io>
@@ -1403,6 +1421,24 @@ entries:
     - https://github.com/stairlingtechnologies/charts/releases/download/stairling-assistant-0.1.0/stairling-assistant-0.1.0.tgz
     version: 0.1.0
   stairling-backend:
+  - apiVersion: v2
+    appVersion: 1.29.7
+    created: "2026-04-10T08:23:35.477355093Z"
+    description: Chart Created by David ALEXANDRE <david.alexandre@w6d.io>
+    digest: a755ed58e4d700362225e29bbc28f8234c0ac5c8e5689124c72ac0adab3764b5
+    home: https://stairling.com
+    keywords:
+    - backend
+    - stairling
+    maintainers:
+    - email: david@stairling.com
+      name: david972
+    name: stairling-backend
+    sources:
+    - https://charts.stairling.bluelabs.fr
+    urls:
+    - https://github.com/stairlingtechnologies/charts/releases/download/stairling-backend-1.0.125/stairling-backend-1.0.125.tgz
+    version: 1.0.125
   - apiVersion: v2
     appVersion: 1.29.6
     created: "2026-04-09T14:41:22.16336125Z"
@@ -3742,4 +3778,4 @@ entries:
     urls:
     - https://github.com/stairlingtechnologies/charts/releases/download/webhook-gateway-0.1.0/webhook-gateway-0.1.0.tgz
     version: 0.1.0
-generated: "2026-04-09T14:41:22.164348238Z"
+generated: "2026-04-10T08:23:35.477942593Z"

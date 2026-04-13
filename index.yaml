@@ -2,6 +2,24 @@ apiVersion: v1
 entries:
   backend:
   - apiVersion: v2
+    appVersion: 1.29.12
+    created: "2026-04-13T14:28:14.176740866Z"
+    description: Chart Created by David ALEXANDRE <david.alexandre@w6d.io>
+    digest: 24c910af670a4dc4bd615e7d82dbbbbca660e5d3b74de926cb4d5078ad3c26d3
+    home: https://stairling.com
+    keywords:
+    - backend
+    - stairling
+    maintainers:
+    - email: david@stairling.com
+      name: david972
+    name: backend
+    sources:
+    - https://charts.stairling.bluelabs.fr
+    urls:
+    - https://github.com/stairlingtechnologies/charts/releases/download/backend-0.1.73/backend-0.1.73.tgz
+    version: 0.1.73
+  - apiVersion: v2
     appVersion: 1.29.11
     created: "2026-04-13T13:11:28.207326403Z"
     description: Chart Created by David ALEXANDRE <david.alexandre@w6d.io>
@@ -1475,6 +1493,24 @@ entries:
     - https://github.com/stairlingtechnologies/charts/releases/download/stairling-assistant-0.1.0/stairling-assistant-0.1.0.tgz
     version: 0.1.0
   stairling-backend:
+  - apiVersion: v2
+    appVersion: 1.29.12
+    created: "2026-04-13T14:28:14.356160479Z"
+    description: Chart Created by David ALEXANDRE <david.alexandre@w6d.io>
+    digest: c66a7daeb82e45bd9589af125a221c1e7f94f67a07de058a1da962c67e65cc81
+    home: https://stairling.com
+    keywords:
+    - backend
+    - stairling
+    maintainers:
+    - email: david@stairling.com
+      name: david972
+    name: stairling-backend
+    sources:
+    - https://charts.stairling.bluelabs.fr
+    urls:
+    - https://github.com/stairlingtechnologies/charts/releases/download/stairling-backend-1.0.129/stairling-backend-1.0.129.tgz
+    version: 1.0.129
   - apiVersion: v2
     appVersion: 1.29.11
     created: "2026-04-13T13:11:28.407079024Z"
@@ -3886,4 +3922,4 @@ entries:
     urls:
     - https://github.com/stairlingtechnologies/charts/releases/download/webhook-gateway-0.1.0/webhook-gateway-0.1.0.tgz
     version: 0.1.0
-generated: "2026-04-13T13:11:28.40774253Z"
+generated: "2026-04-13T14:28:14.357377786Z"

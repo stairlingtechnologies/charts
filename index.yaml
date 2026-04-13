@@ -2,6 +2,24 @@ apiVersion: v1
 entries:
   backend:
   - apiVersion: v2
+    appVersion: 1.30.0
+    created: "2026-04-13T14:47:19.853893545Z"
+    description: Chart Created by David ALEXANDRE <david.alexandre@w6d.io>
+    digest: 7d2c8a6e9a5fb5ee2452400629f54ac5587ddfcbad265345f0ac15acf2a8c1d5
+    home: https://stairling.com
+    keywords:
+    - backend
+    - stairling
+    maintainers:
+    - email: david@stairling.com
+      name: david972
+    name: backend
+    sources:
+    - https://charts.stairling.bluelabs.fr
+    urls:
+    - https://github.com/stairlingtechnologies/charts/releases/download/backend-0.1.74/backend-0.1.74.tgz
+    version: 0.1.74
+  - apiVersion: v2
     appVersion: 1.29.12
     created: "2026-04-13T14:28:14.176740866Z"
     description: Chart Created by David ALEXANDRE <david.alexandre@w6d.io>
@@ -1493,6 +1511,24 @@ entries:
     - https://github.com/stairlingtechnologies/charts/releases/download/stairling-assistant-0.1.0/stairling-assistant-0.1.0.tgz
     version: 0.1.0
   stairling-backend:
+  - apiVersion: v2
+    appVersion: 1.30.0
+    created: "2026-04-13T14:47:20.103542521Z"
+    description: Chart Created by David ALEXANDRE <david.alexandre@w6d.io>
+    digest: 9f24d20426bf93638245e86fa4300e3664b2542d05a60bdfeaaab5745b344f6b
+    home: https://stairling.com
+    keywords:
+    - backend
+    - stairling
+    maintainers:
+    - email: david@stairling.com
+      name: david972
+    name: stairling-backend
+    sources:
+    - https://charts.stairling.bluelabs.fr
+    urls:
+    - https://github.com/stairlingtechnologies/charts/releases/download/stairling-backend-1.0.130/stairling-backend-1.0.130.tgz
+    version: 1.0.130
   - apiVersion: v2
     appVersion: 1.29.12
     created: "2026-04-13T14:28:14.356160479Z"
@@ -3922,4 +3958,4 @@ entries:
     urls:
     - https://github.com/stairlingtechnologies/charts/releases/download/webhook-gateway-0.1.0/webhook-gateway-0.1.0.tgz
     version: 0.1.0
-generated: "2026-04-13T14:28:14.357377786Z"
+generated: "2026-04-13T14:47:20.104590466Z"

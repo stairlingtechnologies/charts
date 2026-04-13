@@ -2,6 +2,24 @@ apiVersion: v1
 entries:
   backend:
   - apiVersion: v2
+    appVersion: 1.29.10
+    created: "2026-04-13T09:11:49.264991159Z"
+    description: Chart Created by David ALEXANDRE <david.alexandre@w6d.io>
+    digest: 31adbb22805af07d18bfc30d3946e54f25131ed6800c2753d4514951bdc303e4
+    home: https://stairling.com
+    keywords:
+    - backend
+    - stairling
+    maintainers:
+    - email: david@stairling.com
+      name: david972
+    name: backend
+    sources:
+    - https://charts.stairling.bluelabs.fr
+    urls:
+    - https://github.com/stairlingtechnologies/charts/releases/download/backend-0.1.71/backend-0.1.71.tgz
+    version: 0.1.71
+  - apiVersion: v2
     appVersion: 1.29.8
     created: "2026-04-10T09:41:49.214308936Z"
     description: Chart Created by David ALEXANDRE <david.alexandre@w6d.io>
@@ -1439,6 +1457,24 @@ entries:
     - https://github.com/stairlingtechnologies/charts/releases/download/stairling-assistant-0.1.0/stairling-assistant-0.1.0.tgz
     version: 0.1.0
   stairling-backend:
+  - apiVersion: v2
+    appVersion: 1.29.10
+    created: "2026-04-13T09:11:49.442046536Z"
+    description: Chart Created by David ALEXANDRE <david.alexandre@w6d.io>
+    digest: 24310bfcb7cf2d3b1deb412f8aa28021ab39e0cd7da3cfddf2eb55872535c8f4
+    home: https://stairling.com
+    keywords:
+    - backend
+    - stairling
+    maintainers:
+    - email: david@stairling.com
+      name: david972
+    name: stairling-backend
+    sources:
+    - https://charts.stairling.bluelabs.fr
+    urls:
+    - https://github.com/stairlingtechnologies/charts/releases/download/stairling-backend-1.0.127/stairling-backend-1.0.127.tgz
+    version: 1.0.127
   - apiVersion: v2
     appVersion: 1.29.8
     created: "2026-04-10T09:41:49.358565414Z"
@@ -3814,4 +3850,4 @@ entries:
     urls:
     - https://github.com/stairlingtechnologies/charts/releases/download/webhook-gateway-0.1.0/webhook-gateway-0.1.0.tgz
     version: 0.1.0
-generated: "2026-04-10T09:41:49.359444951Z"
+generated: "2026-04-13T09:11:49.442777273Z"

@@ -1,10 +1,10 @@
 # charts/stairling-backend/Chart.yaml
 apiVersion: v2
 appVersion: 1.32.8
-description: Chart Created by David ALEXANDRE <david.alexandre@w6d.io>
+description: Chart Created by David ALEXANDRE <david@stairling.com>
 home: https://stairling.com
 sources:
-  - https://charts.stairling.bluelabs.fr
+  - https://charts.stairling.com
 keywords:
 - backend
 - stairling
@@ -12,4 +12,4 @@ maintainers:
 - email: david@stairling.com
   name: david972
 name: stairling-backend
-version: 1.0.141
+version: 1.0.142

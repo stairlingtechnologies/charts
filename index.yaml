@@ -1711,6 +1711,24 @@ entries:
   stairling-backend:
   - apiVersion: v2
     appVersion: 1.32.8
+    created: "2026-11-01T11:48:47.215782275Z"
+    description: Chart Created by David ALEXANDRE <david@stairling.com>
+    digest: acaf4b6cff2c792cbcb01460f737211c60968608393702ccc26ad1324e27b0ea
+    home: https://stairling.com
+    keywords:
+    - backend
+    - stairling
+    maintainers:
+    - email: david@stairling.com
+      name: david972
+    name: stairling-backend
+    sources:
+    - https://charts.stairling.com
+    urls:
+    - https://github.com/stairlingtechnologies/charts/releases/download/stairling-backend-1.0.142/stairling-backend-1.0.142.tgz
+    version: 1.0.142
+  - apiVersion: v2
+    appVersion: 1.32.8
     created: "2026-04-20T08:28:36.702627192Z"
     description: Chart Created by David ALEXANDRE <david.alexandre@w6d.io>
     digest: e432d6c764b6cb0ed18ba68630461c176a268925cc4417e7fa6f1da4d19ee9a9
@@ -4354,4 +4372,4 @@ entries:
     urls:
     - https://github.com/stairlingtechnologies/charts/releases/download/webhook-gateway-0.1.0/webhook-gateway-0.1.0.tgz
     version: 0.1.0
-generated: "2026-04-20T08:28:36.703267065Z"
+generated: "2026-11-01T11:48:47.216336803Z"
